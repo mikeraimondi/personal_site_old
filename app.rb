@@ -17,7 +17,6 @@ def test
     YAML.dump(me, out)
   end
 end
-test()
 
 me = YAML.load_file('me.yaml')
 
@@ -26,8 +25,20 @@ get '/' do
   erb :index
 end
 
-get '/projects' do
-  'Projects go here'
+get '/about' do
+  erb :about
+end
+
+get '/portfolio' do
+  erb :portfolio
+end
+
+get '/resume' do
+  erb :resume
+end
+
+get '/contact' do
+  erb :contact
 end
 
 not_found do
